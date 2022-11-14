@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="parroquiadeSanDionisio" size="0.600000 0.600000" />
+    <ImageTarget name="CatedraldeSantoDomingo" size="0.600000 0.600000" />
+    <ImageTarget name="CatedraldeSantiagodelosCaballeros" size="0.600000 0.600000" />
+    <ImageTarget name="CatedraldeLaVega" size="0.600000 0.600000" />
+    <ImageTarget name="SenoradelaAltagracia" size="0.600000 0.600000" />
+  </Tracking>
+</QCARConfig>

@@ -11,7 +11,7 @@ public class ManagerButtons : MonoBehaviour
     void Start()
     {
         ARcore.onClick.AddListener(delegate { ManagerScenas.Instance.Transicion("ARCatedral"); });
-        infoIglesia.onClick.AddListener(delegate { ManagerScenas.Instance.Transicion("InfoIglesias"); });
+        infoIglesia.onClick.AddListener(delegate { ManagerScenas.Instance.Transicion("Recorrido"); });
     }
 
     // Update is called once per frame

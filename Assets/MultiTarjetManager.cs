@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
-//sing UnityEngine.XR.ARSubsystems;
+//using UnityEngine.XR.ARSubsystems;
 
 public class MultiTarjetManager : MonoBehaviour
 {
