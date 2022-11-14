@@ -20,6 +20,13 @@ public class ManagerIglesias : MonoBehaviour
     {
         tmpTitle.text = title[id];
         tmpDescrption.text = description[id];
-        canvasInfo.SetActive(true);
+        if (canvasInfo.activeInHierarchy)
+        {
+            canvasInfo.SetActive(false);
+        }
+        else
+        {
+            canvasInfo.SetActive(true);
+        }
     }
 }
