@@ -20,4 +20,8 @@ public class ManagerRecorrido : MonoBehaviour
         }
         Debug.Log(Screen.orientation);
     }
+    public void MainMenu()
+    {
+        ManagerScenas.Instance.Transicion("MainMenu");
+    }
 }
