@@ -20,7 +20,7 @@ public class ManagerIglesias : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        Screen.orientation = ScreenOrientation.Portrait;
+
     }
     public void ChangeInfo(int id)
     {
@@ -31,16 +31,16 @@ public class ManagerIglesias : MonoBehaviour
             case 0:
                 //1.	Catedral de la Inmaculada Concepción (Concepción de La Vega)
                 tmpImage1.sprite = spriteIglesia[0];
-                tmpImage1.sprite = spriteIglesia[1];
-                tmpImage1.sprite = spriteIglesia[2];
+                tmpImage2.sprite = spriteIglesia[1];
+                tmpImage3.sprite = spriteIglesia[2];
                 tmpButton.onClick.RemoveAllListeners();
                 tmpButton.onClick.AddListener(() => Application.OpenURL("https://goo.gl/maps/1vPLtGrgPJDpdFRPA"));
                 break;
             case 1:
                 //3.	Catedral de Santiago Apóstol 
                 tmpImage1.sprite = spriteIglesia[6];
-                tmpImage1.sprite = spriteIglesia[7];
-                tmpImage1.sprite = spriteIglesia[8];
+                tmpImage2.sprite = spriteIglesia[7];
+                tmpImage3.sprite = spriteIglesia[8];
                 tmpButton.onClick.RemoveAllListeners();
                 tmpButton.onClick.AddListener(() => Application.OpenURL("https://goo.gl/maps/1594VfAWhjrC61EZ6"));
 
@@ -48,24 +48,24 @@ public class ManagerIglesias : MonoBehaviour
             case 2:
                 //2.	Catedral Primada de América
                 tmpImage1.sprite = spriteIglesia[3];
-                tmpImage1.sprite = spriteIglesia[4];
-                tmpImage1.sprite = spriteIglesia[5];
+                tmpImage2.sprite = spriteIglesia[4];
+                tmpImage3.sprite = spriteIglesia[5];
                 tmpButton.onClick.RemoveAllListeners();
                 tmpButton.onClick.AddListener(() => Application.OpenURL("https://goo.gl/maps/zUP5sJ2TaRSy753U7"));
                 break;
             case 3:
                 //5.	El Santuario de San Dionisio
                 tmpImage1.sprite = spriteIglesia[12];
-                tmpImage1.sprite = spriteIglesia[13];
-                tmpImage1.sprite = spriteIglesia[14];
+                tmpImage2.sprite = spriteIglesia[13];
+                tmpImage3.sprite = spriteIglesia[14];
                 tmpButton.onClick.RemoveAllListeners();
                 tmpButton.onClick.AddListener(() => Application.OpenURL("https://goo.gl/maps/VU7UfiJemdJXjpuE9"));
                 break;
             case 4:
                 //4.	Basílica de Higüey
                 tmpImage1.sprite = spriteIglesia[9];
-                tmpImage1.sprite = spriteIglesia[10];
-                tmpImage1.sprite = spriteIglesia[11];
+                tmpImage2.sprite = spriteIglesia[10];
+                tmpImage3.sprite = spriteIglesia[11];
                 tmpButton.onClick.RemoveAllListeners();
                 tmpButton.onClick.AddListener(() => Application.OpenURL("https://goo.gl/maps/MbCrQMTuQAqVWK866"));
                 break;
