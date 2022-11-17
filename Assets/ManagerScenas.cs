@@ -12,6 +12,7 @@ public class ManagerScenas : MonoBehaviour
     public string scenas3= "ARCatedral";
     public string scenas4;
     public GameObject canvasTransition;
+    public bool menuInicio;
     void Awake()
     {
         if (Instance == null)
@@ -41,6 +42,7 @@ public class ManagerScenas : MonoBehaviour
     public void Transicion(string scene)
     {
         Debug.Log("111");
+        menuInicio = true;
         StartCoroutine(InitTransicion(scene));
     }
 
@@ -50,5 +52,9 @@ public class ManagerScenas : MonoBehaviour
         canvasTransition.GetComponent<Animator>().SetBool("Inicio", false);
         yield return new WaitForSecondsRealtime(3);
         SceneManager.LoadScene(scene);
+    }
+    public void ChangeMenuInicio()
+    {
+
     }
 }
