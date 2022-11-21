@@ -2,33 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ManagerInfoIglesias : MonoBehaviour
 {
-    public string title;
-    public string Description;
-    public TMP_Text titleText;
-    public TMP_Text descriptionText;
-    public GameObject canvas; 
+    public Button button;
+    public ManagerIglesias managerIglesias;
+    public int id;
+    public GameObject canvas;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            titleText.text = title;
-            descriptionText.text = Description;
-            canvas.SetActive(true);
-
+            button.onClick.RemoveAllListeners();
+            button.onClick.AddListener(() => managerIglesias.ChangeInfo(id));
+            button.onClick.AddListener(() => canvas.SetActive(true));
+            button.gameObject.SetActive(true);
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            button.gameObject.SetActive(false);
             canvas.SetActive(false);
-
         }
     }
-    public void CerrarInfo()
+    /*public void CerrarInfo()
     {
         if (canvas.activeInHierarchy)
         {
@@ -38,5 +38,5 @@ public class ManagerInfoIglesias : MonoBehaviour
         {
             canvas.SetActive(true);
         }
-    }
+    }*/
 }

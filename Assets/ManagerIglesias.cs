@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class ManagerIglesias : MonoBehaviour
 {
+    public static ManagerIglesias Instance;
     public string[] title;
     public string[] description;
     public Sprite[] spriteIglesia;
@@ -16,11 +17,12 @@ public class ManagerIglesias : MonoBehaviour
     public Image tmpImage3;
     public Button tmpButton;
     public GameObject canvasInfo;
-    public GameObject[] iglesias;
+    public bool tutorial;
+    public GameObject tutorialCanvas;
     // Start is called before the first frame update
     private void Start()
     {
-
+        GameObject.Find("GameScene").GetComponent<ManagerScenas>().ManagerIglesias = this;
     }
     public void ChangeInfo(int id)
     {
@@ -81,56 +83,18 @@ public class ManagerIglesias : MonoBehaviour
             canvasInfo.SetActive(true);
         }
     }
-    public void DescIglesias(int id)
+    public void Tutorial()
     {
-        switch (id)
+        if (tutorial)
         {
-            case 0:
-                iglesias[0].SetActive(true);
-                iglesias[1].SetActive(false);
-                iglesias[2].SetActive(false);
-                iglesias[3].SetActive(false);
-                iglesias[4].SetActive(false);
-                break;
-            case 1:
-                iglesias[0].SetActive(false);
-                iglesias[1].SetActive(true);
-                iglesias[2].SetActive(false);
-                iglesias[3].SetActive(false);
-                iglesias[4].SetActive(false);
-                break;
-            case 2:
-                iglesias[0].SetActive(false);
-                iglesias[1].SetActive(false);
-                iglesias[2].SetActive(true);
-                iglesias[3].SetActive(false);
-                iglesias[4].SetActive(false);
-                break;
-            case 3:
-                iglesias[0].SetActive(false);
-                iglesias[1].SetActive(false);
-                iglesias[2].SetActive(false);
-                iglesias[3].SetActive(true);
-                iglesias[4].SetActive(false);
-                break;
-            case 4:
-                iglesias[0].SetActive(false);
-                iglesias[1].SetActive(false);
-                iglesias[2].SetActive(false);
-                iglesias[3].SetActive(false);
-                iglesias[4].SetActive(true);
-                break;
-            default:
-                break;
+            StartCoroutine(AnimacionTutorial());
         }
     }
-    public void ActivateIglesias()
+    IEnumerator AnimacionTutorial()
     {
-        for (int i = 0; i < iglesias.Length; i++)
-        {
-            iglesias[i].SetActive(true);
-        }
+        tutorialCanvas.SetActive(true);
+        yield return new WaitForSecondsRealtime(5);
+        tutorialCanvas.SetActive(false);
     }
-
-
+    
 }

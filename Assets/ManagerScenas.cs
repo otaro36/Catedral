@@ -13,6 +13,7 @@ public class ManagerScenas : MonoBehaviour
     public string scenas4;
     public GameObject canvasTransition;
     public bool menuInicio;
+    public ManagerIglesias ManagerIglesias;
     void Awake()
     {
         if (Instance == null)
@@ -24,10 +25,15 @@ public class ManagerScenas : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
         //canvasTransition = GameObject.Find("CanvasTransicion");
         //
     }
- 
+    private void Start()
+    {
+        
+    }
+
     public void Intro()
     {
         StartCoroutine(IntroTransicion());
@@ -36,8 +42,9 @@ public class ManagerScenas : MonoBehaviour
     IEnumerator IntroTransicion()
     {
         
-        yield return new WaitForSecondsRealtime(3);
+        yield return new WaitForSecondsRealtime(5);
         canvasTransition.SetActive(false);
+        ManagerIglesias.Tutorial();
     }
     public void Transicion(string scene)
     {
@@ -50,7 +57,7 @@ public class ManagerScenas : MonoBehaviour
     {
         canvasTransition.SetActive(true);
         canvasTransition.GetComponent<Animator>().SetBool("Inicio", false);
-        yield return new WaitForSecondsRealtime(3);
+        yield return new WaitForSecondsRealtime(4);
         SceneManager.LoadScene(scene);
     }
     public void ChangeMenuInicio()

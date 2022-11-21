@@ -1,5 +1,5 @@
 {
-    "dependencies": {
+  "dependencies": {
     "com.ptc.vuforia.engine": "file:com.ptc.vuforia.engine-10.11.3.tgz",
     "com.unity.cinemachine": "2.8.9",
     "com.unity.collab-proxy": "1.15.18",
