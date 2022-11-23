@@ -24,4 +24,12 @@ public class ManagerRecorrido : MonoBehaviour
     {
         ManagerScenas.Instance.Transicion("MainMenu");
     }
+    public void RecorridoIntro()
+    {
+        ManagerScenas.Instance.Transicion("Basilica Cathedral Scenes");
+    }
+    public void Recorrido()
+    {
+        ManagerScenas.Instance.Transicion("Recorrido");
+    }
 }
