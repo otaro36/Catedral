@@ -7,9 +7,9 @@ public class Swipe : MonoBehaviour
 {
     public List<GameObject> Iglesias;
     public int x;
-    public SwipeInputManager swipeInputManager;
+    //public SwipeInputManager swipeInputManager;
 
-    private void OnEnable()
+    /*private void OnEnable()
     {
         swipeInputManager.OnSwipeLeft += PreviusPage;
         swipeInputManager.OnSwipeRight += NextPage;
@@ -18,7 +18,7 @@ public class Swipe : MonoBehaviour
     {
         swipeInputManager.OnSwipeLeft -= PreviusPage;
         swipeInputManager.OnSwipeRight -= NextPage;
-    }
+    }*/
 
     public void PreviusPage()
     {
