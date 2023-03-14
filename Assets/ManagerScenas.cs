@@ -48,7 +48,6 @@ public class ManagerScenas : MonoBehaviour
     }
     public void Transicion(string scene)
     {
-        Debug.Log("111");
         menuInicio = true;
         StartCoroutine(InitTransicion(scene));
     }
